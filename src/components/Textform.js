@@ -96,7 +96,7 @@ export default function Textform(props) {
     sentence_counter();
     if(document.getElementById("box").value.length===0){
       setword_countt(0);
-      setsentence_count(0)
+      setsentence_count(0);
     }
     
     setText(event.target.value);
@@ -114,6 +114,8 @@ export default function Textform(props) {
   };
   const Clicked_clear_Btn = () => {
     setText("");
+    setword_countt(0);
+    setsentence_count(0);
     props.funalert("Text Cleared","success");
   };
   //According to the teacher there should be constant so just change it and then change Clicked_add_sapce btn to accomodate the change

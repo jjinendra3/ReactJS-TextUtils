@@ -67,7 +67,7 @@ export default function Textform(props) {
     while (newstring[h] === " ") {
       newstring = newstring.substring(0, h - 1);
     }
-    props.funalert("All Adiitional Spaces removed","success");
+    props.funalert("All Additional Spaces removed","success");
     let str=newstring.slice(1, newstring.length-1);
     setText(newstring.charAt(0).toUpperCase()+str);
     
@@ -130,32 +130,33 @@ export default function Textform(props) {
           className="form-control"
           value={text}
           placeholder="Enter Text"
-          style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'black'}}
+          style={{backgroundColor:props.mode==='dark'?'#D5FFFF':'white',color:props.mode==='black'}}
           onChange={handleonchange}
           id="box"
           rows="8"
         ></textarea>
         <br />
-        <button className="btn btn-primary mx-1" onClick={Clicked_Up_Btn}>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={Clicked_Up_Btn}>
           Convert to UPPERCASE
+          
         </button>
 
-        <button className="btn btn-primary mx-1" onClick={Clicked_low_Btn}>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={Clicked_low_Btn}>
           Convert to lowercase
         </button>
-        <button className="btn btn-primary mx-1" onClick={Clicked_clear_Btn}>
+        <button disabled={text.length===0}  className="btn btn-primary mx-1 my-1" onClick={Clicked_clear_Btn}>
           Clear Text
         </button>
-        <button
-          className="btn btn-primary mx-1"
+        <button  disabled={text.length===0} 
+          className="btn btn-primary mx-1 my-1"
           onClick={Clicked_add_space_Btn}
         >
           Remove Additional Spaces
         </button>
-        <button className="btn btn-primary mx-1" onClick={copy_text}>
+        <button disabled={text.length===0}  className="btn btn-primary mx-1 my-1" onClick={copy_text}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-1" onClick={replacer}>
+        <button disabled={text.length===0}  className="btn btn-primary mx-1 my-1" onClick={replacer}>
           Replace Text
         </button>
       </div>
@@ -175,7 +176,7 @@ export default function Textform(props) {
         <p><i className="fa-brands fa-twitter"></i> : {check_twitter()}</p>
 
         <h3>Preview</h3>
-        <p>{text.length>0?text:"Enter Something to preview here"}</p>
+        <p>{text.length>0?text:"Nothing to Preview!"}</p>
       </div>
     </>
   );

@@ -36,7 +36,8 @@ export default function About(props) {
     }}/>
     </div>
     <div className="col">
-    <h1 style={{color:props.mode==='dark'?'white':'black'}}>About Us</h1><br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <h1 style={{color:props.mode==='dark'?'white':'black'}}>About Us</h1>
         <p style={{color:props.mode==='dark'?'white':'black'}}>
         Welcome to TextUtils, your one-stop website for all your text manipulation needs. Whether you want to convert text to uppercase or lowercase, remove spaces, replace words, estimate reading time, or even customize the color theme, we've got you covered. With our user-friendly interface, you can effortlessly transform your text to suit your needs. Join the countless users who have benefited from our efficient and hassle-free text manipulation services. Explore TextUtils today and unlock the power of text manipulation at your fingertips.
         </p>

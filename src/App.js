@@ -66,9 +66,8 @@ function App() {
       />
       <Alert alert={alert} />
       <div className="container my-3">
-      {/* <Routes>
+      {/* <Routes>About routes, used in websites for fast reload of content
             <Route exact path="/about" element={}> */}
-            <About mode={mode} />
             {/* </Route>
             <Route exact path="/" element={}> */}
             <Textform
@@ -76,6 +75,7 @@ function App() {
           mode={mode}
           funalert={showalert}
         />
+            <About mode={mode} />
         </div>
             {/* </Route>
           </Routes>

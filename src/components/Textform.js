@@ -35,7 +35,7 @@ export default function Textform(props) {
     setsentence_count(c);
     }
   const word_counter=()=>{
-  let b=text.split(" ");
+  let b=text.split(/\s+/);
   
   let c=0;
   for(let i=0;i<b.length;i++){
@@ -46,9 +46,7 @@ export default function Textform(props) {
   setword_countt(c);
   }
   const copy_text = () => {
-    var texta = text;
-    texta.select();
-    navigator.clipboard.writeText(texta);
+    navigator.clipboard.writeText(text);
     props.funalert("Text copied to clipboard","success");
   };
   const Clicked_add_space_Btn = () => {
@@ -138,7 +136,7 @@ export default function Textform(props) {
         <br />
         <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={Clicked_Up_Btn}>
           Convert to UPPERCASE
-          
+
         </button>
 
         <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={Clicked_low_Btn}>

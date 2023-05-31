@@ -32,20 +32,15 @@ function App() {
         document.body.style.backgroundColor = "grey";
       } else if (color_want === "green") {
         document.body.style.backgroundColor = "green";
-        // setmode("blue"); only to show that we can change navbar color also, doing the same color to bodya nd navbar looks ugly ngl
       } else if (color_want === "red") {
         document.body.style.backgroundColor = "red";
-        // setmode("blue"); only to show that we can change navbar color also, doing the same color to bodya nd navbar looks ugly ngl
       } else if (color_want === "yellow") {
         document.body.style.backgroundColor = "yellow";
-        // setmode("blue"); only to show that we can change navbar color also, doing the same color to bodya nd navbar looks ugly ngl
       } else if (color_want === "cyan") {
         document.body.style.backgroundColor = "cyan";
-        // setmode("blue"); only to show that we can change navbar color also, doing the same color to bodya nd navbar looks ugly ngl
       } else if (color_want === "black") {
         document.body.style.backgroundColor = "black";
-        // setmode("blue"); only to show that we can change navbar color also, doing the same color to bodya nd navbar looks ugly ngl
-      } else {
+        } else {
         document.body.style.backgroundColor = "grey";
       }
       //showalert("Dark Mode Enabled", "success");

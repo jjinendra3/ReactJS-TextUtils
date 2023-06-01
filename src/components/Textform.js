@@ -50,24 +50,24 @@ export default function Textform(props) {
     props.funalert("Text copied to clipboard","success");
   };
   const Clicked_add_space_Btn = () => {
-    let newstring = text;
-    let flag = 1;
-    while (flag === 1) {
-      flag = 0;
-      for (let i = 0; i < text.length - 1; i++) {
-        if (newstring[i] === " " && newstring[i + 1] === " ") {
-          newstring = newstring.replace(newstring[i], "");
-          flag = 1;
-        }
-      }
-    }
-    let h = text.length - 1;
-    while (newstring[h] === " ") {
-      newstring = newstring.substring(0, h - 1);
-    }
+    // let newstring = text;
+    // let flag = 1;
+    // while (flag === 1) {
+    //   flag = 0;
+    //   for (let i = 0; i < text.length - 1; i++) {
+    //     if (newstring[i] === " " && newstring[i + 1] === " ") {
+    //       newstring = newstring.replace(newstring[i], "");
+    //       flag = 1;
+    //     }
+    //   }
+    // }
+    // let h = text.length - 1;
+    // while (newstring[h] === " ") {
+    //   newstring = newstring.substring(0, h);
+    // }
+    let newtext=text.split(/[ ]+/);
+    setText(newtext.join(" "));
     props.funalert("All Additional Spaces removed","success");
-    let str=newstring.slice(1, newstring.length-1);
-    setText(newstring.charAt(0).toUpperCase()+str);
     
   };
   const total_char_wo_space = () => {

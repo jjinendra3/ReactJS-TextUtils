@@ -1,5 +1,5 @@
 import React from "react";
-import img from "/Users/asus/Desktop/CWH/my-app/src/download.png"
+import img from "C:/Users/asus/Desktop/CWH/TextUtils-Function Based React JS Website/src/download.png"
 export default function About(props) {
   //JS uses camelCase instead of dashes in css stlying
   // const [btntext, setbtntext] = useState("Enable Dark Mode!");
